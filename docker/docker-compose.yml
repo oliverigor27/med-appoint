@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  database:
+    image: postgres:13-alpine
+    container_name: med_appoint
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 4567
+      POSTGRES_DATABASE: med_appoint 
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data:/var/lib/postgresql/data
