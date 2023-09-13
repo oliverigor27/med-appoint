@@ -2,7 +2,6 @@ import { IsEmail, IsEnum, IsNotEmpty, IsString } from "class-validator";
 import { Permissions } from "../enums/permitions.enum";
 import { Specialty } from "../enums/specialty.enum";
 
-
 export class CreateMedDTO {
 
     @IsNotEmpty({
@@ -27,7 +26,7 @@ export class CreateMedDTO {
 
     @IsString()
     city: string;
-
+    
     @IsEnum(Permissions)
     permission: number;
 
