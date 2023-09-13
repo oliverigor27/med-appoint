@@ -10,6 +10,12 @@ export class CreateUserDTO {
     @IsNotEmpty({
         message: "this field cannot be empty"
     })
+    @IsString()
+    cpf: string;
+
+    @IsNotEmpty({
+        message: "this field cannot be empty"
+    })
     @IsEmail()
     email: string;
 
